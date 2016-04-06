@@ -9,6 +9,8 @@
 
 他们分别是因为添加nil到NSDictionary，添加nil到NSArray，数组越界。为了防止这些因为代码疏忽而造成的崩溃，所以写了WQContainerSafe这个类。
 ## 类介绍
+这文件一定要在工程中弄成mrc的。不然会有这样一个bug   在弹出键盘后home出程序就会crash，并且最后报`[UIKeyboardLayoutStar release]`这样一个错误
+
 WQContainerSafe这个类只有`WQContainerSafe.m`这一个文件。它并不会要求在其他代码的地方引用，调用它，只需要把该文件加到工程里面即可。  
 ```Objective-C
 +(void) load {
