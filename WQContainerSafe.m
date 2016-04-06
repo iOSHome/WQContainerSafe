@@ -25,6 +25,8 @@
 {
     if (value!=nil) {
         [self setSaveObject:value forKey:key];
+    }else{
+        NSAssert(NO, @"字典value 为空");
     }
 }
 @end
@@ -33,10 +35,10 @@
 
 +(void)load
 {
-//    [self swizzeObjectRange0];
-//    [self swizzeObjectRangeI];
-//    [self swizzeObjectRangeM];
-//    [self swizzeInstert];
+    [self swizzeObjectRange0];
+    [self swizzeObjectRangeI];
+    [self swizzeObjectRangeM];
+    [self swizzeInstert];
 }
 +(void)swizzeObjectRange0
 {
@@ -67,7 +69,7 @@
 }
 -(id)objectAtSafeIndex0:(NSUInteger)index
 {
-    NSAssert(YES, @"数组为空0");
+    NSAssert(NO, @"数组为空0");
     return nil;
 }
 -(id)objectAtSafeIndexI:(NSUInteger)index
@@ -75,7 +77,7 @@
     if (index<self.count) {
         return [self objectAtSafeIndexI:index];
     }
-    NSAssert(YES, @"数组为空I");
+    NSAssert(NO, @"数组为空I");
     return nil;
 }
 -(id)objectAtSafeIndexM:(NSUInteger)index
@@ -83,7 +85,7 @@
     if (index<self.count) {
         return [self objectAtSafeIndexM:index];
     }
-    NSAssert(YES, @"数组为空M");
+    NSAssert(NO, @"数组为空M");
     return nil;
 }
 #pragma mark - instert
